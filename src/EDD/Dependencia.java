@@ -57,6 +57,21 @@ public class Dependencia extends Datos
     {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString()
+    {
+        String y="";
+        for (int i = 0; i <3-cveD.length() ; i++)
+        {
+            y+=0;
+        }
+        y+=cveD;
+        y+="D"+y;
+        return "Dependencia{" + "cveD=" + y + ", tipo=" + tipo + '}';
+    }
+    
+    
     
     
 }

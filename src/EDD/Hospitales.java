@@ -4,13 +4,16 @@ package EDD;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author aange
  */
 public class Hospitales extends Datos
 {
+
+    private String cveH;
+    private String dir;
+    private int nivel;
 
     /**
      * @return the cveH
@@ -59,7 +62,19 @@ public class Hospitales extends Datos
     {
         this.nivel = nivel;
     }
-    private String cveH;
-    private String dir;
-    private int nivel;
+
+    @Override
+    public String toString()
+    {
+        String y="";
+        for (int i = 0; i <3-cveH.length() ; i++)
+        {
+            y+=0;
+        }
+        y+=cveH;
+        y+="H"+y;
+        return "Hospitales{" + "cveH=" + y + ", dir=" + dir + ", nivel=" + nivel + '}';
+    }
+    
+
 }

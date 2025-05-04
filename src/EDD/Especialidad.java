@@ -11,6 +11,9 @@ package EDD;
 public class Especialidad extends Datos
 {
 
+    private String cveE;
+    private int noCamas;
+
     /**
      * @return the cveE
      */
@@ -42,6 +45,19 @@ public class Especialidad extends Datos
     {
         this.noCamas = noCamas;
     }
-    private String cveE;
-    private int noCamas;
+
+    @Override
+    public String toString()
+    {
+        String y="";
+        for (int i = 0; i <3-cveE.length() ; i++)
+        {
+            y+=0;
+        }
+        y+=cveE;
+        y+="E"+y;
+        return "Especialidad{" + "cveE=" + y + ", noCamas=" + noCamas + '}';
+    }
+
+    
 }

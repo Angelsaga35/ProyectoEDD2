@@ -14,6 +14,16 @@ public class Paciente extends Datos
     private char status;
     private String vigencia;
 
+    public Paciente(String cveP, char status, String vigencia, int cve, String nombre)
+    {
+        super(cve, nombre);
+        this.cveP = cveP;
+        this.status = status;
+        this.vigencia = vigencia;
+    }
+    
+    
+
     /**
      * @return the cveP
      */
@@ -61,5 +71,48 @@ public class Paciente extends Datos
     {
         this.vigencia = vigencia;
     }
+
+    @Override
+    public void setNombre(String nombre)
+    {
+        super.setNombre(nombre); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    @Override
+    public String getNombre()
+    {
+        return super.getNombre(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    @Override
+    public void setCve(int cve)
+    {
+        super.setCve(cve); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    @Override
+    public int getCve()
+    {
+        return super.getCve(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    @Override
+    public String toString()
+    {
+        
+        String y="";
+        for (int i = 0; i <3-cveP.length() ; i++)
+        {
+            y+=0;
+        }
+        y+=cveP;
+        y+="P"+y;
+        
+        return "Paciente{" + "cveP=" + y + ", status=" + status + ", vigencia=" + vigencia + '}';
+    }
+
+   
+    
+    
     
 }
