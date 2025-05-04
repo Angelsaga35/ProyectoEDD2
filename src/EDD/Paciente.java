@@ -13,11 +13,20 @@ public class Paciente extends Datos
     private String cveP;
     private char status;
     private String vigencia;
+    static int contP = 0;
 
-    public Paciente(String cveP, char status, String vigencia, int cve, String nombre)
+    public Paciente( char status, String vigencia, int cve, String nombre)
     {
         super(cve, nombre);
-        this.cveP = cveP;
+        contP++;
+        this.cveP = String.valueOf(contP);
+        String y="P";
+        for (int i = 0; i <3-cveP.length() ; i++)
+        {
+            y+=0;
+        }
+        y+=cveP;
+        this.cveP = y;
         this.status = status;
         this.vigencia = vigencia;
     }
@@ -100,15 +109,9 @@ public class Paciente extends Datos
     public String toString()
     {
         
-        String y="";
-        for (int i = 0; i <3-cveP.length() ; i++)
-        {
-            y+=0;
-        }
-        y+=cveP;
-        y+="P"+y;
         
-        return "Paciente{" + "cveP=" + y + ", status=" + status + ", vigencia=" + vigencia + '}';
+        
+        return "Paciente{" + "cveP=" + cveP + ", status=" + status + ", vigencia=" + vigencia + '}';
     }
 
    

@@ -16,12 +16,12 @@ public class Manipula
 
     MultiLista m = new MultiLista();
 
-    public void insertaD(Dependencia obj, String s[], String nomb)
+    public NodoML insertaD(Dependencia obj, String s[], String nomb)
     {
         NodoML n = new NodoML(obj, nomb);
         s[0] = "Dependencias";
         m.setR(m.inserta(n, m.getR(), s, 0));
-
+        return m.getR();
     }
 
     public void insertaH(String nom, Hospitales obj, String s[])
@@ -34,7 +34,7 @@ public class Manipula
             m.setR(m.inserta(n, m.getR(), s, 0));
         } else
         {
-            
+
             s = new String[2];
             s[0] = "Dependencias";
             NodoML n2 = new NodoML("Hospitales", "Hospitales");
@@ -47,7 +47,6 @@ public class Manipula
     public void insertaE(String nom, Especialidad obj, String s[])
     {
         NodoML n = new NodoML(obj, nom);
-        
 
         if (s[1] != null)
         {
@@ -60,7 +59,7 @@ public class Manipula
             NodoML n2 = new NodoML("Especialidades", "Especialidades");
             m.setR(m.inserta(n2, m.getR(), s, 0));
             m.setR(m.inserta(n, m.getR(), s, 0));
-            
+
         }
 
     }
@@ -94,13 +93,22 @@ public class Manipula
                 m.setR(obj1[0]);
                 break;
             case "Hospitales":
-
+                s[1] = caso;
+                NodoML obj2[] = new NodoML[3];
+                m.elimina(obj2, m.getR(), s, 0);
+                m.setR(obj2[1]);
                 break;
             case "Especialidades":
-
+                s[2] = caso;
+                NodoML obj3[] = new NodoML[4];
+                m.elimina(obj3, m.getR(), s, 0);
+                m.setR(obj3[2]);
                 break;
             case "Pacientes":
-
+                s[3] = caso;
+                NodoML obj4[] = new NodoML[5];
+                m.elimina(obj4, m.getR(), s, 0);
+                m.setR(obj4[3]);
                 break;
 
             default:
@@ -112,6 +120,11 @@ public class Manipula
         m.elimina(obj1, m.getR(), s, 0);
         m.setR(obj1[0]);
         System.out.println(obj1[1].getEt());
+    }
+
+    public void consultaG()
+    {
+        System.out.println(m.desp(m.getR(), ""));
     }
 
 }
