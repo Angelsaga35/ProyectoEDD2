@@ -11,6 +11,7 @@ package EDD;
 public class Especialidad extends Datos
 {
 
+<<<<<<< HEAD
     private String cveE;
     private int noCamas;
     static int contE = 0;
@@ -34,16 +35,21 @@ public class Especialidad extends Datos
      * @return the cveE
      */
     public String getCveE()
+=======
+    public Especialidad()
+>>>>>>> Max
     {
-        return cveE;
     }
 
-    /**
-     * @param cveE the cveE to set
-     */
-    public void setCveE(String cveE)
+    public Especialidad(int noCamas, String nombre)
     {
-        this.cveE = cveE;
+        super(0, nombre);
+        this.noCamas = noCamas;
+    }
+
+    public String getCveE()
+    {
+        return String.format("E%03d", getCve());
     }
 
     /**
@@ -54,6 +60,7 @@ public class Especialidad extends Datos
         return noCamas;
     }
 
+<<<<<<< HEAD
     /**
      * @param noCamas the noCamas to set
      */
@@ -75,4 +82,7 @@ public class Especialidad extends Datos
         return "Especialidad{" + "cveE=" + y + ", noCamas=" + noCamas + '}';
     }
 
+=======
+    private int noCamas;
+>>>>>>> Max
 }
