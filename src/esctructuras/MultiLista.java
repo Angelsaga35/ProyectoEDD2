@@ -1,4 +1,4 @@
-    /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -12,7 +12,7 @@ public class MultiLista
 {
 
     private static NodoML r;
-    private boolean b= false;
+    private boolean b = false;
 
     /**
      * @return the r
@@ -38,8 +38,8 @@ public class MultiLista
             ListasDLC ld = new ListasDLC();
             ld.setR(r);
             ld.insertar(obj);
-            b=true;
-            return ld.getR();          
+            b = true;
+            return ld.getR();
         } else
         {
             NodoML aux = busca(r, s[nivel]);
@@ -49,13 +49,13 @@ public class MultiLista
                 if (b)
                 {
                     obj.setArb(aux);
-                    b=false;
-                }    
+                    b = false;
+                }
             }
             return r;
         }
     }
-    
+
     public void elimina(NodoML[] obj, NodoML r, String[] s,
             int nivel)
     {
@@ -63,9 +63,9 @@ public class MultiLista
         {
             ListasDLC ld = new ListasDLC();
             ld.setR(r);
-            obj[1]=ld.elimina(s[nivel]);
+            obj[1] = ld.elimina(s[nivel]);
             obj[1].setArb(null);
-            obj[0]= ld.getR();
+            obj[0] = ld.getR();
         } else
         {
             NodoML aux = busca(r, s[nivel]);
@@ -74,10 +74,9 @@ public class MultiLista
                 elimina(obj, aux.getAbj(), s, nivel + 1);
                 aux.setAbj(obj[0]);
             }
-            obj[0]=r;
+            obj[0] = r;
         }
     }
-    
 
     public NodoML busca(NodoML r, String s)
     {
@@ -99,23 +98,25 @@ public class MultiLista
         return null;
     }
 
-    
     public String desp(NodoML r, String t)
     {
-        String s= "";
-        while (r != null)
+        String s = "";
+        NodoML aux = r.getSig();
+        do
         {
-            if (r.getArb()!= null)
-            {
-                s+=  t+ r.getEt() + "==>" +r.getArb().getEt()+"\n" +desp(r.getAbj(),t+"\t");
-            } else
-            {
-                s+=  t+ r.getEt() + "\n" +desp(r.getAbj(),t+"\t");
-            }
-            r= r.getSig();
-        }
+            
+//            do
+//            {
+                if (r.getArb() != null)
+                {
+                    s += t + r.getEt() + "==>" + r.getArb().getEt() + "\n" + desp(r.getAbj(), t + "\t");
+                } else
+                {
+                    s += t + r.getEt() + "\n" + desp(r.getAbj(), t + "\t");
+                }
+                r = r.getSig();
+//            } while (aux == r.getSig());
+        }while (r != null && aux != r.getSig());
         return s;
     }
 }
-
-
