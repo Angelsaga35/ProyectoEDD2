@@ -12,7 +12,6 @@ import java.io.Serializable;
  */
 public abstract class Datos implements Serializable
 {
-    public static final long SVUID=1L;
     private int cve;
     private String nombre;
 
@@ -59,4 +58,12 @@ public abstract class Datos implements Serializable
     {
         this.nombre = nombre;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Datos{" + "cve=" + cve + ", nombre=" + nombre + '}';
+    }
+    
+    
 }

@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/EDD/Especialidad.java</file>
+
+            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/Interfaz/VtnCrearHospital.java</file>
+            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/Interfaz/VtnCrearEspecialidad.java</file>
+            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/Interfaz/PRINCIPAL.java</file>
+            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/Interfaz/VtnCrearPaciente.java</file>
+            <file>file:/C:/Users/Pc/OneDrive%20-%20Universidad%20Autónoma%20del%20Estado%20de%20México/Documents/NetBeansProjects/ProyectoEDD2/src/Interfaz/VtnCrearDependencia.java</file>
+
         </group>
     </open-files>
 </project-private>
