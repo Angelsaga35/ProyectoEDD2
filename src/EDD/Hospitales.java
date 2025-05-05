@@ -10,10 +10,6 @@ package EDD;
  */
 public class Hospitales extends Datos
 {
-    private String dir;
-    private int nivel;
-
-<<<<<<< HEAD
     private String cveH;
     private String dir;
     private int nivel;
@@ -35,27 +31,13 @@ public class Hospitales extends Datos
         this.nivel = nivel;
     }
 
-    
-    /**
-     * @return the cveH
-     */
-    public String getCveH()
-=======
     public Hospitales()
->>>>>>> Max
     {
-    }
-
-    public Hospitales(String dir, int nivel, String nombre)
-    {
-        super(0, nombre);
-        this.dir = dir;
-        this.nivel = nivel;
     }
 
     public String getCveH()
     {
-        return String.format("H%03d", getCve());
+        return cveH;
     }
 
     /**
@@ -89,8 +71,7 @@ public class Hospitales extends Datos
     {
         this.nivel = nivel;
     }
-
-<<<<<<< HEAD
+    
     @Override
     public String toString()
     {
@@ -98,7 +79,4 @@ public class Hospitales extends Datos
         return "Hospitales{" + "cveH=" + cveH + ", dir=" + dir + ", nivel=" + nivel + '}';
     }
     
-
-=======
->>>>>>> Max
 }

@@ -10,11 +10,7 @@ package EDD;
  */
 public class Dependencia extends Datos
 {
-<<<<<<< HEAD
-
     private String cveD;
-=======
->>>>>>> Max
     private char tipo;
     static int cont = 0;
 
@@ -22,7 +18,6 @@ public class Dependencia extends Datos
     {
     }
 
-<<<<<<< HEAD
     public Dependencia(char tipo, int cve, String nombre)
     {
 
@@ -36,17 +31,11 @@ public class Dependencia extends Datos
         }
         y += cveD;
         this.cveD = y;
-=======
-    public Dependencia(char tipo, String nombre)
-    {
-        super(0, nombre);
->>>>>>> Max
-        this.tipo = tipo;
     }
 
     public String getCveD()
     {
-        return String.format("D%03d", getCve());
+        return cveD;
     }
 
     /**
