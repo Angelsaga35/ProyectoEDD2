@@ -10,26 +10,24 @@ package EDD;
  */
 public class Paciente extends Datos
 {
-    private String cveP;
     private char status;
     private String vigencia;
 
-    /**
-     * @return the cveP
-     */
+    public Paciente()
+    {
+    }
+
+    public Paciente(char status, String vigencia, String nombre)
+    {
+        super(0, nombre);
+        this.status = status;
+        this.vigencia = vigencia;
+    }
+
     public String getCveP()
     {
-        return cveP;
+        return String.format("P%03d", getCve());
     }
-
-    /**
-     * @param cveP the cveP to set
-     */
-    public void setCveP(String cveP)
-    {
-        this.cveP = cveP;
-    }
-
     /**
      * @return the status
      */

@@ -10,36 +10,21 @@ package EDD;
  */
 public class Dependencia extends Datos
 {
-    private String cveD;
     private char tipo;
 
     public Dependencia()
     {
     }
 
-    public Dependencia(String cveD, char tipo, int cve, String nombre)
+    public Dependencia(char tipo, String nombre)
     {
-        super(cve, nombre);
-        this.cveD = cveD;
+        super(0, nombre);
         this.tipo = tipo;
     }
-    
-    
 
-    /**
-     * @return the cveD
-     */
     public String getCveD()
     {
-        return cveD;
-    }
-
-    /**
-     * @param cveD the cveD to set
-     */
-    public void setCveD(String cveD)
-    {
-        this.cveD = cveD;
+        return String.format("D%03d", getCve());
     }
 
     /**

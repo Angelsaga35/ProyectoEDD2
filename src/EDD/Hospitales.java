@@ -11,21 +11,23 @@ package EDD;
  */
 public class Hospitales extends Datos
 {
+    private String dir;
+    private int nivel;
 
-    /**
-     * @return the cveH
-     */
-    public String getCveH()
+    public Hospitales()
     {
-        return cveH;
     }
 
-    /**
-     * @param cveH the cveH to set
-     */
-    public void setCveH(String cveH)
+    public Hospitales(String dir, int nivel, String nombre)
     {
-        this.cveH = cveH;
+        super(0, nombre);
+        this.dir = dir;
+        this.nivel = nivel;
+    }
+
+    public String getCveH()
+    {
+        return String.format("H%03d", getCve());
     }
 
     /**
@@ -59,7 +61,5 @@ public class Hospitales extends Datos
     {
         this.nivel = nivel;
     }
-    private String cveH;
-    private String dir;
-    private int nivel;
+
 }

@@ -15,19 +15,19 @@ public abstract class Datos implements Serializable
     public static final long SVUID=1L;
     private int cve;
     private String nombre;
+    private static int contador = 1; // Contador estático para generar claves
 
     public Datos()
     {
+        this.cve = contador++;
     }
 
     public Datos(int cve, String nombre)
     {
-        this.cve = cve;
+        this();
         this.nombre = nombre;
     }
 
-    
-    
     /**
      * @return the cve
      */
